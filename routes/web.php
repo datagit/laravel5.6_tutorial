@@ -21,4 +21,8 @@ Route::get('id/{id?}', function ($id = 100) {
 
 Route::get('abc/hello', 'AbcController@showPath');
 
-Route::get('abc/haha/{name?}', 'AbcController@getName')->name('abc_name');
+Route::get('abc/haha/{name?}', 'AbcController@getName')->name('abc_name_haha');
+
+Route::get('/foo/bar','UriController@index')->name('uri_name_foo_bar');
+
+Route::post('/uri/post_test', 'UriController@postTest')->name('uri_post_test');

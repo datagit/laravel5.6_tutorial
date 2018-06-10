@@ -5,4 +5,4 @@ php artisan serve
 php artisan
 php artisan route:list
 #http://laravel-recipes.com/
-
+php artisan make:controller UriController
