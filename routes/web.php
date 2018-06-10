@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('id/{id?}', function ($id = 100) {
+    echo sprintf('ID: %s', $id);
+});
+
+Route::get('abc/hello', 'AbcController@showPath');
+
+Route::get('abc/haha/{name?}', 'AbcController@getName')->name('abc_name');
