@@ -8,3 +8,15 @@
     - https://laravel.com/docs/5.6/logging#building-log-stacks
 #### Basic
     - https://www.cloudways.com/blog/routing-in-laravel/
+    - https://laravel.com/docs/5.6/migrations
+    - (Best Practices for Development with Laravel) https://medium.com/@cloudways/best-practices-for-development-with-laravel-5e4746a327ab
+    - (how to using tinker)  https://scotch.io/tutorials/tinker-with-the-data-in-your-laravel-apps-with-php-artisan-tinker
+    ```bash
+        #check connect to DB
+        $php artisan tinker
+        DB::connection()->getPdo()
+    ```
+    - (version control database schema) https://laravel.com/docs/5.6/migrations
+    - (testing database) factory https://laravel.com/docs/5.6/database-testing
+    - (data seed for testing) https://laravel.com/docs/5.6/seeding
+    
