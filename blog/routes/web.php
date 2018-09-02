@@ -48,3 +48,11 @@ Route::get('foo', function () {
 
     return 'Hello World';
 });
+
+Route::get('/table/{number?}', function ($number =2) {
+    for ($i = 1; $i <= 10; $i++) {
+        echo "$i * $number = ". $i*$number ."<br>";
+    }
+})->where('number', '[0-9]+')->name('table');
+
+//Route::get('user', 'UserController@showProfile');
