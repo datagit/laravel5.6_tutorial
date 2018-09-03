@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Middleware;
+namespace MyLearnLaravel5x\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode as Middleware;
 
