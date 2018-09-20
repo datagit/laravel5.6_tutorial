@@ -20,3 +20,11 @@
     - (testing database) factory https://laravel.com/docs/5.6/database-testing
     - (data seed for testing) https://laravel.com/docs/5.6/seeding
     
+#### Testing
+    - https://laravel.com/docs/5.2/testing#custom-http-requests
+    - https://semaphoreci.com/community/tutorials/getting-started-with-phpunit-in-laravel
+    ```bash
+    $ composer require laravel/browser-kit-testing --dev
+    $ ./vendor/bin/phpunit
+    ```
+    
