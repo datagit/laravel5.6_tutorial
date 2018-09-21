@@ -23,9 +23,14 @@
 #### Testing
     - https://laravel.com/docs/5.2/testing#custom-http-requests
     - https://semaphoreci.com/community/tutorials/getting-started-with-phpunit-in-laravel
+    - https://github.com/laravel/browser-kit-testing
     ```bash
     $ composer require laravel/browser-kit-testing --dev
     $ ./vendor/bin/phpunit
     ```
-    - https://github.com/laravel/browser-kit-testing
-    
+    - Browser Tests (Laravel Dusk) for automation testing: https://laravel.com/docs/5.6/dusk
+    ```bash
+        composer require --dev laravel/dusk
+        php artisan dusk:install
+        php artisan dusk
+    ```
