@@ -79,11 +79,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    dao man dat
                 </div>
 
                 <div class="links">
-                    <a href="/test">test page</a>
+                    <a href="/">main page</a>
                     <a href="/about-us">About Us</a>
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>

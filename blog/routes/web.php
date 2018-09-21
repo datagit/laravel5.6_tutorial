@@ -15,6 +15,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/json', function () {
+    return response()->json([
+        'name' => 'Abigail',
+        'state' => 'CA',
+        'pet' => ['name' =>  'p1', 'age' => 10],
+    ]);
+})->name('json');
+
+Route::get('/test', function () {
+    return view('test');
+})->name('test');
+
+Route::get('/about-us', function () {
+    return view('about_us');
+})->name('about-us');
+
+Route::post('/about-us', function () {
+    $input = \Illuminate\Support\Facades\Input::all();
+    return view('about_us_post', ['all' => $input]);
+})->name('about-us-post');
+
 Route::get('foo', function () {
     //using way1:
     $object = array(1,2,3,);

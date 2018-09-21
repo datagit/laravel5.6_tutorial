@@ -27,4 +27,5 @@
     $ composer require laravel/browser-kit-testing --dev
     $ ./vendor/bin/phpunit
     ```
+    - https://github.com/laravel/browser-kit-testing
     
