@@ -34,8 +34,6 @@
         php artisan dusk:install
         php artisan dusk
     ```
-    - Artisan CLI
-        https://laravel.com/docs/5.0/artisan
 #### Laravel Log View
     - doc: https://github.com/rap2hpoutre/laravel-log-viewer 
 #### Laravel 5 Web Artisan
@@ -68,3 +66,12 @@
     #/Users/daomanhdat/my_php/laravel5.6_tutorial/blog/vendor/emir/laravel-webartisan/src/views/index.blade.php
     var exitUrl             = "{{ url('/') }}";
     ```
+#### queues
+    - https://laravel.com/docs/5.0/queues
+    ```bash
+    $ php artisan queue:table
+    $ php artisan migrate
+    ```
+#### Artisan CLI, Scheduling
+    - https://laravel.com/docs/5.0/artisan
+    
