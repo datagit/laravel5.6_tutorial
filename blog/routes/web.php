@@ -81,3 +81,9 @@ Route::get('/table/{number?}', function ($number =2) {
 //Route::controller('users', 'UsersController');
 
 Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
+
+Route::get('/cli', function()
+{
+    $exitCode = \Illuminate\Support\Facades\Artisan::call('help', ['--option' => 'foo']);
+    return $exitCode;
+});

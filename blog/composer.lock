@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "422d7caa65ba07119f745b6f1979ea33",
+    "content-hash": "d0cb20a7c95e32e5fb5600e9118dc0c3",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -265,6 +265,50 @@
                 "validator"
             ],
             "time": "2018-08-16T20:49:45+00:00"
+        },
+        {
+            "name": "emir/laravel-webartisan",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/emir/laravel-webartisan.git",
+                "reference": "93e4d3440f459c9cca7d06565fc9a66c10b215cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/emir/laravel-webartisan/zipball/93e4d3440f459c9cca7d06565fc9a66c10b215cd",
+                "reference": "93e4d3440f459c9cca7d06565fc9a66c10b215cd",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Emir\\Webartisan\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emir Karşıyakalı",
+                    "email": "emirkarsiyakali@gmail.com"
+                }
+            ],
+            "description": "Web artisan allows to run artisan console commands using a browser",
+            "homepage": "https://github.com/emir/laravel-webartisan",
+            "keywords": [
+                "artisan",
+                "laravel",
+                "php",
+                "webartisan"
+            ],
+            "time": "2015-08-28T07:17:19+00:00"
         },
         {
             "name": "erusev/parsedown",

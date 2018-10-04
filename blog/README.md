@@ -34,5 +34,37 @@
         php artisan dusk:install
         php artisan dusk
     ```
+    - Artisan CLI
+        https://laravel.com/docs/5.0/artisan
 #### Laravel Log View
     - doc: https://github.com/rap2hpoutre/laravel-log-viewer 
+#### Laravel 5 Web Artisan
+    - doc: https://github.com/emir/laravel-webartisan
+    ```php
+    #vendor/emir/laravel-webartisan/src/WebartisanController.php
+        /**
+         * Runs console command.
+         *
+         * @param string $command
+         *
+         * @return array [status, output]
+         */
+        private function runCommand($command)
+        {
+            //$cmd = base_path("artisan $command 2>&1");
+            $path_artisan = base_path() . "/artisan";
+            $php_path = exec("which php");
+            $cmd = "$php_path $path_artisan $command 2>&1";
+            $handler = popen($cmd, 'r');
+            $output = '';
+            while (!feof($handler)) {
+                $output .= fgets($handler);
+            }
+            $output = trim($output);
+            $status = pclose($handler);
+    
+            return [$status, $output];
+        }
+    #/Users/daomanhdat/my_php/laravel5.6_tutorial/blog/vendor/emir/laravel-webartisan/src/views/index.blade.php
+    var exitUrl             = "{{ url('/') }}";
+    ```
