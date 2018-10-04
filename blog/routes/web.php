@@ -87,3 +87,5 @@ Route::get('/cli', function()
     $exitCode = \Illuminate\Support\Facades\Artisan::call('help', ['--option' => 'foo']);
     return $exitCode;
 });
+
+Route::get('logging', '\MyLearnLaravel5x\Http\Controllers\LoggingController@FuncName');

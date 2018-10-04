@@ -38,6 +38,12 @@ return [
             'channels' => ['single'],
         ],
 
+        'mydebug' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/debug.log'),
+            'level' => 'debug',
+        ],
+
         'single' => [
             'driver' => 'single',
             'path' => storage_path('logs/laravel.log'),
