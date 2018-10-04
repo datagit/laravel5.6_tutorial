@@ -34,3 +34,5 @@
         php artisan dusk:install
         php artisan dusk
     ```
+#### Laravel Log View
+    - doc: https://github.com/rap2hpoutre/laravel-log-viewer 

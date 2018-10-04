@@ -77,3 +77,7 @@ Route::get('/table/{number?}', function ($number =2) {
 })->where('number', '[0-9]+')->name('table');
 
 //Route::get('user', 'UserController@showProfile');
+
+//Route::controller('users', 'UsersController');
+
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');

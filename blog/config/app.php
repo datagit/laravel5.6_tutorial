@@ -159,6 +159,7 @@ return [
         // MyLearnLaravel5x\Providers\BroadcastServiceProvider::class,
         MyLearnLaravel5x\Providers\EventServiceProvider::class,
         MyLearnLaravel5x\Providers\RouteServiceProvider::class,
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 
     ],
 
