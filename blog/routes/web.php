@@ -89,3 +89,11 @@ Route::get('/cli', function()
 });
 
 Route::get('logging', '\MyLearnLaravel5x\Http\Controllers\LoggingController@FuncName');
+
+app()->bind('name', function() {
+    return new MyLearnLaravel5x\Module\Person;
+});
+
+Route::get('/module', function () {
+    echo Person::getName();
+});
