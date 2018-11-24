@@ -96,4 +96,5 @@ app()->bind('name', function() {
 
 Route::get('/module', function () {
     echo Person::getName();
+    echo Person::getAge();
 });
