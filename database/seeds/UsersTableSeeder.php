@@ -17,6 +17,6 @@ class UsersTableSeeder extends Seeder
 //            'password' => bcrypt('secret'),
 //        ]);
 
-        factory(App\User::class, 50)->create();
+        factory(MyLearnLaravel5x\User::class, 50)->create();
     }
 }

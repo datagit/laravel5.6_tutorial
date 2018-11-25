@@ -11,6 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        echo "run seeding at class DatabaseSeeder!\n";
         $this->call(UsersTableSeeder::class);
+        $this->call(DogsTableSeeder::class);
+        $this->call(FlightsTableSeeder::class);
     }
 }

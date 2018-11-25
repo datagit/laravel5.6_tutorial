@@ -74,4 +74,10 @@
     ```
 #### Artisan CLI, Scheduling
     - https://laravel.com/docs/5.0/artisan
-    
+#### Model Eloquent
+    - https://eloquentbyexample.com/
+    - https://laravel-news.com/eloquent-tips-tricks
+    ```bash
+    # create model, seeder, factory
+    $ php artisan make:model --help
+    ```
