@@ -111,3 +111,5 @@ $ php artisan make:seeder ProductTableSeeder
 $ php artisan migrate
 $ php artisan db:seed --class=ProductTableSeeder
 ```
+log all queries
+https://arjunphp.com/laravel-5-5-log-eloquent-queries/
