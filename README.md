@@ -82,3 +82,32 @@
     # Create Model Eloquent: model(class), migrate(schema), seed and factory (insert dummy data)
     $ php artisan make:model --help
     ```
+#### Examples
+```bash
+$ php artisan make:model Category --migration --factory
+    #app/Category.php
+    #database/factories/CategoryFactory.php
+    #database/migrations/2019_01_03_034337_create_categories_table.php
+$ php artisan make:seeder CategoryTableSeeder
+    #database/seeds/CategoryTableSeeder.php
+$ php artisan migrate --seed
+
+$ php artisan tinker
+```
+```php
+//get all
+MyLearnLaravel5x\Category::all();
+$category = MyLearnLaravel5x\Category::find(1);
+$category->delete();
+MyLearnLaravel5x\Category::destroy(1);
+MyLearnLaravel5x\Category::destroy(1,2,3);
+
+MyLearnLaravel5x\Category::where('id', 10)->get();
+MyLearnLaravel5x\Category::where('id', '>', 10)->get();
+```
+```bash
+$ php artisan make:model Product --migration --factory
+$ php artisan make:seeder ProductTableSeeder
+$ php artisan migrate
+$ php artisan db:seed --class=ProductTableSeeder
+```
