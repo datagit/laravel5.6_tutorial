@@ -118,3 +118,15 @@ make authen
 ```bash
 $ php artisan make:auth
 ```
+how to log queries using tinker
+https://laracasts.com/discuss/channels/laravel/how-to-log-sql-using-tinker
+```bash
+$ php artisan tinker
+```
+```php
+DB::enableQueryLog();
+
+# then to view the queries...
+DB::getQueryLog();
+```
+
