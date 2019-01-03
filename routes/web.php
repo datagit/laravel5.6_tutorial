@@ -98,3 +98,7 @@ Route::get('/module', function () {
     echo Person::getName();
     echo Person::getAge();
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

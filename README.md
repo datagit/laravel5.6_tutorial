@@ -113,3 +113,8 @@ $ php artisan db:seed --class=ProductTableSeeder
 ```
 log all queries
 https://arjunphp.com/laravel-5-5-log-eloquent-queries/
+
+make authen
+```bash
+$ php artisan make:auth
+```
