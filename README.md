@@ -130,3 +130,63 @@ DB::enableQueryLog();
 DB::getQueryLog();
 ```
 
+new tables: tags, posts, post_tag(Pivot)
+```bash
+# tags
+$ php artisan make:model Tag --migration --factory
+$ php artisan make:seeder TagTableSeeder
+$ php artisan migrate
+$ php artisan db:seed --class=TagTableSeeder
+# posts
+$ php artisan make:model Post --migration --factory
+$ php artisan make:seeder PostTableSeeder
+$ php artisan migrate
+$ php artisan db:seed --class=PostTableSeeder
+# post_tag
+$ php artisan make:migration create_post_tag_table
+# https://laravel.com/docs/5.7/migrations#foreign-key-constraints
+$ php artisan migrate
+$ php artisan tinker
+```
+https://laravel.com/docs/5.7/eloquent-relationships#updating-many-to-many-relationships
+```php
+$p = MyLearnLaravel5x\Post::find(1);
+//Attaching / Detaching
+$p->tags()->attach(1);
+$p->tags();
+$p->tags()->attach(2);
+$p->tags();
+
+$p->tags()->toggle(1,2,3);
+$p->tags()->toggle(1,2,3);
+
+$p->tags()->sync([1,2,3]);
+$p->tags()->sync([1,2,3]);
+$p->tags();
+```
+Constraining Eager Loads
+```php
+//case 1:
+$users = App\User::with(['posts' => function ($query) {
+    $query->where('title', 'like', '%first%');
+}])->get();
+//case 2:
+$users = App\User::with(['posts' => function ($query) {
+    $query->orderBy('created_at', 'desc');
+}])->get();
+```
+Lazy Eager Loading
+```php
+//case 1:
+$books = App\Book::all();
+
+//case 2:
+if ($someCondition) {
+    $books->load('author', 'publisher');
+}
+
+//case 3:
+$books->load(['author' => function ($query) {
+    $query->orderBy('published_date', 'asc');
+}]);
+```
