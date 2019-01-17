@@ -5,6 +5,7 @@ namespace MyLearnLaravel5x\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+//use Illuminate\Http\Resources\Json\JsonResource;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        //JsonResource::withoutWrapping();
         DB::listen(function ($query) {
             Log::info(
                 $query->sql,
@@ -31,8 +33,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if ($this->app->environment() == 'local') {
-            $this->app->register('Emir\Webartisan\WebartisanServiceProvider');
-        }
+
     }
 }

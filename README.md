@@ -190,3 +190,97 @@ $books->load(['author' => function ($query) {
     $query->orderBy('published_date', 'asc');
 }]);
 ```
+
+Json API Rest from scratch
+https://www.youtube.com/watch?v=4pc6cgisbKE
+https://laravel.com/docs/5.7/eloquent
+https://laravel.com/docs/5.7/eloquent-resources
+```bash
+# create model, migration, seeder, controller with option --resource
+# create model and migration and factory
+$ php artisan make:model Article --migration --factory
+
+# create seeder
+$ php artisan make:seeder ArticleTableSeeder
+
+# migrate to create schema table into DB
+$ php artisan migrate
+# init dummy data into DB
+$ php artisan db:seed --class=ArticleTableSeeder
+
+# create controller with --resource
+$ php artisan make:controller ArticleController --resource
+
+# add route api: routes/api.php
+
+# make resource
+$ php artisan make:resource Article
+# update custom response fields...
+# add code to controller
+
+```
+
+app/Http/Controllers/ArticleController.php
+```php
+/**
+ * Display a listing of the resource.
+ *
+ * @return \Illuminate\Http\Response
+ */
+public function index()
+{
+    $articles = Article::paginate(10);
+    return ArticleResource::collection($articles);
+}
+``` 
+app/Http/Resources/Article.php
+```php
+/**
+ * Transform the resource into an array.
+ *
+ * @param  \Illuminate\Http\Request  $request
+ * @return array
+ */
+public function toArray($request)
+{
+    //get all fields
+    //return parent::toArray($request);
+
+    //get custom fields
+    return [
+        'id' => $this->id,
+        'title' => $this->title,
+        'body' => $this->body,
+        'created_at' => $this->created_at,
+        'updated_at' => $this->updated_at,
+        'status' => 'ok',
+    ];
+}
+```
+new frameworks
+- install
+- configuration
+- structure folder
+- console commands line
+- logger
+- router
+- controller
+- template
+- model: [migration, factory, seeder]
+- JSON API REST from scratch to make an examples
+- testing
+- web full: to make an examples
+- admin panel to make an examples
+- package bundles to make an examples
+
+init API
+
+```bash
+
+$ composer dump-autoload
+# migrate to create schema table into DB
+$ php artisan migrate
+# init dummy data into DB
+$ php artisan db:seed --class=ArticleTableSeeder
+
+```
