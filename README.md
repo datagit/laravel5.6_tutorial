@@ -284,3 +284,9 @@ $ php artisan migrate
 $ php artisan db:seed --class=ArticleTableSeeder
 
 ```
+
+https://laravel.com/docs/master/artisan
+```bash
+$ php artisan help email:send
+$ php artisan email:send 1 --queue=default
+```
