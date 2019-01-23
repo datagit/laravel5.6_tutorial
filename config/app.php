@@ -161,6 +161,8 @@ return [
         MyLearnLaravel5x\Providers\RouteServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 
+        Weidner\Goutte\GoutteServiceProvider::class, // [1]
+        
     ],
 
     /*
@@ -210,6 +212,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Person' => \MyLearnLaravel5x\Facades\Person::class,
+
+        'Goutte' => Weidner\Goutte\GoutteFacade::class, // [2]
 
     ],
 

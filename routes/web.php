@@ -102,3 +102,11 @@ Route::get('/module', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/scraper-crawler', function () {
+    $crawler = Goutte::request('GET', 'https://duckduckgo.com/html/?q=Laravel');
+    $crawler->filter('.result__title .result__a')->each(function ($node) {
+        dump($node->text());
+    });
+})->name('scraper-crawler');
