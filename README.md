@@ -292,7 +292,11 @@ $ php artisan email:send 1 --queue=default
 ```
 
 Crawler and Scraper data from other website
-Laravel 5 Facade for Goutte, a simple PHP Web Scraper
+[Document Laravel 5 Facade for Goutte, a simple PHP Web Scraper](http://docs.guzzlephp.org/en/stable/)
+https://symfony.com/doc/current/components/dom_crawler.html
+- Links
+- Images
+- Forms
 [https://github.com/dweidner/laravel-goutte](https://github.com/dweidner/laravel-goutte)
 
 

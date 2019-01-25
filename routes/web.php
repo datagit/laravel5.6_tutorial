@@ -105,8 +105,89 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/scraper-crawler', function () {
-    $crawler = Goutte::request('GET', 'https://duckduckgo.com/html/?q=Laravel');
-    $crawler->filter('.result__title .result__a')->each(function ($node) {
-        dump($node->text());
+//    $crawler = Goutte::request('GET', 'https://quantrimang.com/cach-khoa-pc-tu-xa-tren-windows-10-161310');
+    //$crawler = Goutte::request('GET', 'https://quantrimang.com/khong-the-tim-thay-snipping-tool-tren-windows-10-day-la-cach-khac-phuc-161262');
+    //$crawler = Goutte::request('GET', 'https://quantrimang.com/kich-hoat-mo-trang-cai-dat-share-page-an-tren-ung-dung-settings-windows-10-127304');
+    $crawler = Goutte::request('GET', 'https://quantrimang.com/sua-loi-these-files-cant-be-opened-tren-windows-10--81-7-127235');
+
+    $crawler->filter('#adsposttop')->each(function ($crawler) {
+        //remove ads
+        foreach ($crawler as $node) {
+            $node->parentNode->removeChild($node);
+        }
     });
+
+    $crawler->filter('#contentMain div.content.post-detail div.adbox')->each(function ($crawler) {
+        //remove ads
+        foreach ($crawler as $node) {
+            $node->parentNode->removeChild($node);
+        }
+    });
+
+    $crawler->filter('#contentMain > div.content.post-detail > div.content-detail.textview > ul')->each(function ($crawler) {
+        //remove element html
+        foreach ($crawler as $node) {
+            $node->parentNode->removeChild($node);
+        }
+    });
+
+    //#contentMain > div.content.post-detail > div.content-detail.textview > div.toc
+    $crawler->filter('#contentMain > div.content.post-detail > div.content-detail.textview > div.toc')->each(function ($crawler) {
+        //remove element html
+        foreach ($crawler as $node) {
+            $node->parentNode->removeChild($node);
+        }
+    });
+
+
+    $crawler->filter('#contentMain > div.content.post-detail > div.content-detail.textview')->each(function ($node) {
+        //get string html
+        echo $node->html();
+    });
+
+//    $crawler->filter('#contentMain div.content.post-detail div.content-detail.textview img')->each(function ($node) {
+////        $rc = new ReflectionClass(get_class($this));
+////        echo $rc->getFileName();die;
+//        //var_dump(get_class($node));
+//        var_dump( $node->image()->getUri());
+//    });
 })->name('scraper-crawler');
+
+Route::get('/scraper-link', function () {
+    $crawler = Goutte::request('GET', 'https://quantrimang.com/windows-10-os');
+
+    $crawler->filter('#adsposttop')->each(function ($crawler) {
+        //remove ads
+        foreach ($crawler as $node) {
+            $node->parentNode->removeChild($node);
+        }
+    });
+
+    $crawler->filter('#contentMain div.content.post-detail div.adbox')->each(function ($crawler) {
+        //remove ads
+        foreach ($crawler as $node) {
+            $node->parentNode->removeChild($node);
+        }
+    });
+
+    //#contentMain > div.content.post-detail > div.content-detail.textview > div.toc
+    $crawler->filter('#contentMain > div.content.post-detail > div.content-detail.textview > div.toc')->each(function ($crawler) {
+        //remove element html
+        foreach ($crawler as $node) {
+            $node->parentNode->removeChild($node);
+        }
+    });
+
+
+    $crawler->filter('#contentMain > div.content > div ul li')->each(function ($node) {
+        //get string html
+        echo $node->html();
+    });
+
+//    $crawler->filter('#contentMain div.content.post-detail div.content-detail.textview img')->each(function ($node) {
+////        $rc = new ReflectionClass(get_class($this));
+////        echo $rc->getFileName();die;
+//        //var_dump(get_class($node));
+//        var_dump( $node->image()->getUri());
+//    });
+})->name('scraper-link');
