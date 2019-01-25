@@ -294,3 +294,8 @@ $ php artisan email:send 1 --queue=default
 Crawler and Scraper data from other website
 Laravel 5 Facade for Goutte, a simple PHP Web Scraper
 [https://github.com/dweidner/laravel-goutte](https://github.com/dweidner/laravel-goutte)
+
+
+Test mock: mockery
+https://github.com/datagit/mockery
+https://viblo.asia/p/testing-with-mockery-in-laravel-PdbGnojBeyA
