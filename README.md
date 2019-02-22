@@ -24,6 +24,8 @@
     - https://laravel.com/docs/5.2/testing#custom-http-requests
     - https://semaphoreci.com/community/tutorials/getting-started-with-phpunit-in-laravel
     - https://github.com/laravel/browser-kit-testing
+    - https://tighten.co/blog/writing-better-css-selectors-in-dusk
+    - https://scotch.io/tutorials/introduction-to-laravel-dusk
     ```bash
     $ composer require laravel/browser-kit-testing --dev
     $ ./vendor/bin/phpunit
@@ -33,6 +35,7 @@
         composer require --dev laravel/dusk
         php artisan dusk:install
         php artisan dusk
+        php artisan dusk --group=insingdotcom
     ```
 #### Laravel Log View
     - doc: https://github.com/rap2hpoutre/laravel-log-viewer 

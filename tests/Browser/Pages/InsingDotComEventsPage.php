@@ -4,7 +4,7 @@ namespace Tests\Browser\Pages;
 
 use Laravel\Dusk\Browser;
 
-class HomePage extends Page
+class InsingDotComEventsPage extends Page
 {
     /**
      * Get the URL for the page.
@@ -13,7 +13,7 @@ class HomePage extends Page
      */
     public function url()
     {
-        return '/';
+        return 'https://www.insing.com/events/';
     }
 
     /**
@@ -36,8 +36,7 @@ class HomePage extends Page
     {
         return [
             '@element' => '#selector',
-            '@login-link' => 'div.flex-center.position-ref.full-height > div.top-right.links > a:nth-child(1)',
-            '@registry-link' => 'div.flex-center.position-ref.full-height > div.top-right.links > a:nth-child(2)',
+            '@events-search-button' => '#events_search_box > div > a',
         ];
     }
 }
