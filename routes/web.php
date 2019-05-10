@@ -11,6 +11,8 @@
 |
 */
 
+use MyLearnLaravel5x\Http\Middleware\CheckAge;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -248,3 +250,7 @@ Route::get('scraper-category', function() {
     });
 
 })->name('scraper-category');
+
+Route::get('/middleware_checkAge', function () {
+    return view('welcome');
+})->middleware(CheckAge::class);
