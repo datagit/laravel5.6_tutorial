@@ -307,3 +307,11 @@ https://symfony.com/doc/current/components/dom_crawler.html
 Test mock: mockery
 https://github.com/datagit/mockery
 https://viblo.asia/p/testing-with-mockery-in-laravel-PdbGnojBeyA
+
+
+Publish vendor
+```bash
+$ php artisan vendor:publish
+```
+HTMLMin Is A Simple HTML Minifier For Laravel 5
+https://packalyst.com/packages/package/htmlmin/htmlmin
