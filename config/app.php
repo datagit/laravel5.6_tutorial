@@ -217,6 +217,7 @@ return [
 
         'Goutte' => Weidner\Goutte\GoutteFacade::class, // [2]
 
+        'DemoClass' => \MyLearnLaravel5x\Facades\DemoClassFacade::class,
     ],
 
 ];

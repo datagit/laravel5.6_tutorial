@@ -2,6 +2,7 @@
 
 namespace MyLearnLaravel5x\Providers;
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use MyLearnLaravel5x\Services\DemoClassService;
 
