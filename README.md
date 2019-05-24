@@ -330,6 +330,8 @@ $ php artisan make:provider DemoClassServiceProvider
 #### Service Provider, Facade, Config Tinker
 ```
 app/
+├── Contracts
+│   └── DogContract.php
 ├── Facades
 │   ├── DemoClassFacade.php
 ├── Providers

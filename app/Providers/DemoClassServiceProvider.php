@@ -5,6 +5,7 @@ namespace MyLearnLaravel5x\Providers;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 use MyLearnLaravel5x\Services\DemoClassService;
+use MyLearnLaravel5x\Services\DogService;
 
 class DemoClassServiceProvider extends ServiceProvider
 {
@@ -26,7 +27,7 @@ class DemoClassServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Config::get('services')['demo_class_service'], function ($app) {
-            return new DemoClassService();
+            return new DemoClassService(new DogService());
         });
     }
 }
