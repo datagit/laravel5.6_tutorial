@@ -11,11 +11,16 @@
     - https://laravel.com/docs/5.6/migrations
     - (Best Practices for Development with Laravel) https://medium.com/@cloudways/best-practices-for-development-with-laravel-5e4746a327ab
     - (how to using tinker)  https://scotch.io/tutorials/tinker-with-the-data-in-your-laravel-apps-with-php-artisan-tinker
+        https://tighten.co/blog/supercharge-your-laravel-tinker-workflow
+        https://gist.github.com/jarektkaczyk/9a540a81ee7d40ce20c78c9f2197a1a9#file-config-php-L121-L124
     ```bash
         #check connect to DB
         $php artisan tinker
         DB::connection()->getPdo()
     ```
+    .env
+        PSYSH_CONFIG=./config/tinker.php
+
     - (version control database schema) https://laravel.com/docs/5.6/migrations
     - (testing database) factory https://laravel.com/docs/5.6/database-testing
     - (data seed for testing) https://laravel.com/docs/5.6/seeding
@@ -315,3 +320,10 @@ $ php artisan vendor:publish
 ```
 HTMLMin Is A Simple HTML Minifier For Laravel 5
 https://packalyst.com/packages/package/htmlmin/htmlmin
+
+#### 
+```bash
+# vi app/Services/DemoClassService.php
+$ php artisan make:provider DemoClassServiceProvider
+
+```

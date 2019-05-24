@@ -162,6 +162,8 @@ return [
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 
         Weidner\Goutte\GoutteServiceProvider::class, // [1]
+
+        \MyLearnLaravel5x\Providers\DemoClassServiceProvider::class,
         
     ],
 

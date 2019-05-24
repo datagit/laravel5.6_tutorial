@@ -35,4 +35,7 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    // name service providers
+    'demo_class_service' => env('DEMO_CLASS_SERVICE', 'demo.class'),
+
 ];
