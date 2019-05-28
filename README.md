@@ -348,3 +348,36 @@ config/
 ├── services.php
 ├── tinker.php
 ```
+
+```
+- helper
+- tinker: debugger
+- databse migration
+- route
+    + Middleware
+- controller: call application_service
+- view
+- console: call application_service
+- code_behind
+    + Modle
+    + Eloquent
+    + Application Services
+        * Services: class in business
+        * Contracts: interface
+        * Providers: service provider
+        * Facades: design pattern(https://www.script-tutorials.com/design-patterns-in-php/)
+- packages
+    + htmlmin/htmlmin(for minify view)
+    + rap2hpoutre/laravel-log-viewer(for log)
+    + barryvdh/laravel-debugbar(for debugger)
+    
+    //Scraper
+    + weidner/goutte(simple PHP Web Scraper)
+    
+    //test
+    + laravel/dusk(for automation test)
+    
+    //admin
+    + tcg/voyager(for admin)
+- Laravel Best practices: https://github.com/alexeymezenin/laravel-best-practices
+```
