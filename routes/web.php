@@ -11,6 +11,7 @@
 |
 */
 
+use HTMLMin\HTMLMin\Http\Middleware\MinifyMiddleware;
 use MyLearnLaravel5x\Http\Middleware\CheckAge;
 
 Route::get('/', function () {
@@ -254,3 +255,9 @@ Route::get('scraper-category', function() {
 Route::get('/middleware_checkAge', function () {
     return view('welcome');
 })->middleware(CheckAge::class);
+
+
+Route::get('/test_minify', function () {
+    //return Response::json(['foo' => 'bar', ['baz']], 200, [], JSON_PRETTY_PRINT);
+    return view('welcome');
+})->middleware(MinifyMiddleware::class);

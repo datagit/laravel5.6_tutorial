@@ -151,6 +151,11 @@ return [
          * Package Service Providers...
          */
 
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        Weidner\Goutte\GoutteServiceProvider::class, // [1]
+
+        HTMLMin\HTMLMin\HTMLMinServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -159,9 +164,7 @@ return [
         // MyLearnLaravel5x\Providers\BroadcastServiceProvider::class,
         MyLearnLaravel5x\Providers\EventServiceProvider::class,
         MyLearnLaravel5x\Providers\RouteServiceProvider::class,
-        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 
-        Weidner\Goutte\GoutteServiceProvider::class, // [1]
 
         \MyLearnLaravel5x\Providers\DemoClassServiceProvider::class,
         
@@ -216,7 +219,11 @@ return [
         'Person' => \MyLearnLaravel5x\Facades\Person::class,
 
         'Goutte' => Weidner\Goutte\GoutteFacade::class, // [2]
+        'HTMLMin' => HTMLMin\HTMLMin\Facades\HTMLMin::class,
 
+        /*
+         * Application Class Aliases...
+         */
         'DemoClass' => \MyLearnLaravel5x\Facades\DemoClassFacade::class,
     ],
 
