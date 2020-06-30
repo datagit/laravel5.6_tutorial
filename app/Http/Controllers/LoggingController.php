@@ -4,6 +4,7 @@ namespace MyLearnLaravel5x\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use MyLearnLaravel5x\User;
 
 class LoggingController extends Controller
 {
@@ -21,6 +22,9 @@ class LoggingController extends Controller
         Log::info($message);
         Log::debug($message);
         Log::channel('mydebug')->info('mydebug: Something happened!' . $message);
+        $user = LoggerInterface::class;
+
+        eval(\Psy\sh());
         return;
     }
 }

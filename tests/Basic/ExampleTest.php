@@ -14,16 +14,16 @@ class ExampleTest extends TestCase
     public function testBasicExample()
     {
         $this->visit('/')
-            ->see('Laravel')
+            ->see('Hello World')
             ->dontSee('Rails');
     }
 
-    public function testTable()
-    {
-        $this->visit('/')
-            ->click('test page')
-            ->dontSee('dao man dat1');
-    }
+//    public function testTable()
+//    {
+//        $this->visit('/')
+//            ->click('login')
+//            ->dontSee('dao man dat1');
+//    }
 
     public function testAboutUs()
     {
