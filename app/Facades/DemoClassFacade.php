@@ -7,6 +7,7 @@
  */
 
 namespace MyLearnLaravel5x\Facades;
+use Illuminate\Support\Facades\Config;
 
 
 class DemoClassFacade extends \Illuminate\Support\Facades\Facade

@@ -17,16 +17,13 @@ class ExampleTest extends DuskTestCase
     public function testBasicExample()
     {
         $this->browse(function(Browser $browser){
-            $browser->visit(new HomePage())
-                ->assertSee('Laravel');
+            $browser->visit(new HomePage());
+            //eval(\Psy\sh());
+            $browser->assertSee('Hello World!!');
 
-            $browser->visit(new HomePage())
-                ->click('@login-link')
-                ->assertSee('Login');
+            $browser->visit(new HomePage())->click('@login-link')->assertSee('Login');
 
-            $browser->visit(new HomePage())
-                ->click('@registry-link')
-                ->assertSee('Register');
+            $browser->visit(new HomePage())->click('@registry-link')->assertSee('Register');
         });
     }
 

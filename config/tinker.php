@@ -4,6 +4,7 @@
 | Laravel magic begins
 |--------------------------------------------------------------------------
 */
+// include './vendor/autoload.php';
 // Register toRawSql() macro which will get nice, full sql of the query (with bound values)
 \Illuminate\Database\Query\Builder::macro('toRawSql', function () {
     $bindings = array_map(function ($binding) {
@@ -115,7 +116,7 @@ return [
     // Display an additional startup message. You can color and style the
     // message thanks to the Symfony Console tags. See
     // https://symfony.com/doc/current/console/coloring.html for more details.
-    'startupMessage' => sprintf('<info>%s</info>', shell_exec('uptime')),
+    'startupMessage' => sprintf('<info>Using local config file (config/tinker.php): %s</info>', shell_exec('uptime')),
     //test casters: $query = User::where('email', 'like', 'upollich@example.org')
     'casters' => [
         'Illuminate\Database\Eloquent\Builder' => 'castQuery',
