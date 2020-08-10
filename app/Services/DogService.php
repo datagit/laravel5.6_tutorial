@@ -27,5 +27,6 @@ class DogService implements DogContract
     public function go()
     {
         // TODO: Implement go() method.
+        // xxx
     }
 }

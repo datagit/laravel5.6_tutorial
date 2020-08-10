@@ -25,6 +25,16 @@ class DemoClassService
     }
     public function doSomethingForDog()
     {
+        // TODO: xxx
+        // FIXME: yyy
+        // TODO-1: fef df  ef ef f
+        // CONFIRM-EN:
+        // CONFIRM-JPEN
+        // TODO-2:2222
+        // CONFIRM-PM:222
+        // CONFIRM-SPEC:222
+        // TODO-3: FEF EFE F
+
         var_dump($this->_dog);
         $this->_dog->go();
         $this->_dog->eat();
