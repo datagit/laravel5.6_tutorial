@@ -381,3 +381,7 @@ config/
     + tcg/voyager(for admin)
 - Laravel Best practices: https://github.com/alexeymezenin/laravel-best-practices
 ```
+https://viblo.asia/p/laravel-beauty-recipes-best-practices-6BAMYk9Evnjz
+```
+https://github.com/barryvdh/laravel-ide-helper
+```

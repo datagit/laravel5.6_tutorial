@@ -21,6 +21,7 @@ class DogService implements DogContract
 
     public function sleep()
     {
+
         // TODO: Implement sleep() method.
     }
 

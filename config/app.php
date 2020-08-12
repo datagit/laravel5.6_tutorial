@@ -156,6 +156,8 @@ return [
 
         HTMLMin\HTMLMin\HTMLMinServiceProvider::class,
 
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -167,7 +169,7 @@ return [
 
 
         \MyLearnLaravel5x\Providers\DemoClassServiceProvider::class,
-        
+
     ],
 
     /*
